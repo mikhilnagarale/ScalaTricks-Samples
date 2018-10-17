@@ -1,0 +1,44 @@
+ exit
+exit
+help
+settings
+name
+set name := "HelloScala"
+name
+show name
+set version := 1.0.0
+set version := "1.0.0"
+show version
+show libraryDependencies
+set libraryDependencies +="org.scala-lang" % "scala-actors" % "2.10.5"
+show libraryDependencies
+set libraryDependencies += "org.apache.spark" %% "spark-core" % "1.6.0"
+show libraryDependencies
+sbt run
+compile
+settings -V
+show libraryDependencies
+compile
+help
+show libraryDependencies
+reload
+show libraryDependencies
+set libraryDependencies += "org.apache.spark" %% "spark-core" % "1.6.0"
+show libraryDependencies
+compile
+set libraryDependencies += "org.scala-lang" % "scala-library" % "2.10.5"
+show libraryDependencies
+help
+-V
+settings
+scalaHome
+version
+sourceDirectory
+scalaVersion
+set scalaVersion="2.10.5"
+set scalaVersion := "2.10.5"
+scalaVesion
+scalaVersion
+libraryDependencies
+compile
+exit
