@@ -10,3 +10,46 @@ Elements of FP-
    
     
 Side Effect- If function does anything else other than computing output like writing to file or console then it's called side effect of the function.
+             Doing something other than primary purpose.
+             
+How to validate purity of function-
+Yes- Test for Referencial Transperency
+
+What is referencial transperency?
+- A function is referencial Transperent if we can replace it with a corresponding value without changing the program behaviour.
+
+
+Why Pure Functions-
+-> Pure Functions are safef, small, precise, easy to re-use, they don't surprise you
+-> Pure functions are more composable
+-> Pure functions are easy to test
+-> Memoizable
+-> Can be lazy
+
+
+FirstClass Functions-
+If you can treat a function as a value, it is a first class function.
+i.e you should be able to do everything with a function which you can do with value
+eg
+->you can assign function to a variable.
+->you should be able to pass a function as an argument
+->you can able to return a function from function
+
+In Scala all the functions are FirstClass Function
+
+Higher Order Function-
+A higher order function is a function which either takes one or more function as an argument or returns a function as an result.
+
+Syntax for Function-
+def myFunc(x:Int) = {x*2} //regular function
+
+Anonymus Function-
+A function without name is anonymus function.
+Syntax -
+(x:Int) => {x*2} //anonymus function
+{x*2} //anonymus function. This is actuall only the function body. Scala will identify the parameter type & convert this body to function internally.
+
+
+
+
+
