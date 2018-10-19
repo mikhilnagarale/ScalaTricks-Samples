@@ -1,0 +1,12 @@
+Functional_Programming-
+Functional programming is way of writing software application using only 'pure functions' & 'Immutable Values'.
+
+Elements of FP-
+1. Pure Function-
+   Function = input -> relationship -> output
+   -> Input solely determine the output
+   -> Function doesn't change it's input (eg. Call by value/Call by Ref)
+   -> Function doesn't do anything except computing output (Side effect like writing to the file , console writing , etc).
+   
+    
+Side Effect- If function does anything else other than computing output like writing to file or console then it's called side effect of the function.
