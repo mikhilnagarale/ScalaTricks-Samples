@@ -1,0 +1,54 @@
+Assist: - PFA Scala_Type_Hierarchy.jpeg
+
+What is type system?
+-> A type system is a set of rules that assigns a property called type to the 
+    various programming constructs like variables, expressions, functions or modules.
+    
+    eg-
+    val i:Int = 10// variable
+    def myFunc(x:Int):Boolean={} //function
+    
+What are those rules & who define them?
+->These rules vary from one language to other & creator of the programming language are responsible for establishing those rules in the type system.
+
+Who validate these rules & when are they validated?
+-> 1) Let the compiler verify those rules.
+      ->If the language check the rules at compile time then we call that language as 'Statically Typed Language'. Eg--Scala
+      -> 1) They offer an early protection 
+         2) Better runtime performance since compiler can perform some optimization at compile time to perform better at run time.Eg-Execution of tail-recursion.
+         
+   2)Let the runtime environment check those rules.
+      ->If Language does all the type checking at run time then we call the language as 'Dynamically Typed Language'. Eg--Python
+
+Type System - Is the Protection for the programmer from writing improper code and getting unexpected result.
+
+What does type system do?
+->
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Define Variable/Value-
+Eg- val x:Long = 10
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+1) Scala is a statically typed language
+2) Scala has a unified typed system.  Every Scala class rolls up to Any.
+3) We can further classify Scala type system into two categories
+   ->1) Value Classes (AnyVal) - Can not assign null values
+   ->2) Reference Classes (AnyRef)- derived from Java (java.lang.object) - Can Assign Null Values. 
+4) Nine Fundamental value types are-
+     1) Double, Float, Long, Int, Short, Byte
+     2) Char, Boolean, Unit
+5) You can't use new keyword to instentiate value classes.
+6) New keyword is only allowed for reference classes for Instantiation.
+8) We use 'Unit' type as a return type of a function that doesn't return a meaningful value.
+9) The value class hierarchy is flat. They all are a subclass of AnyVal.
+10) Implicit conversion is one of the key features of Scala Types.
+11) There are many Booster classes like RichInt,  RichBoolean, RichLong. They offer additional functionality using implicit conversion.
+12) Null is a child class of every reference class so we can assign null to any reference class.
+13) Nothing is a child class of every Scala class including Value classes & Reference classes.
+14) We can't instantiate the Nothing.// It has some other purpose
+15) You can't instantiate a value class without initializing it with a valid value other than null and nothing.
+16) Scala has a built in type inference mechanism which allows the programmer to omit type annotations in most of the cases.
+17) All the Types are reside in package name 'scala' except 'String' which is reside in 'java.lang' package.
+18) You don't need to import the package 'scala'& 'java.lang' . Scala will import them by default.
+
