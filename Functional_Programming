@@ -1,5 +1,6 @@
+
 Functional_Programming-
-Functional programming is way of writing software application using only 'pure functions' & 'Immutable Values'.
+-----------------------------------------------------------------------------------------------------------------------------------------Functional programming is way of writing software application using only 'pure functions' & 'Immutable Values'.
 
 Elements of FP-
 1. Pure Function-
@@ -49,7 +50,76 @@ Syntax -
 (x:Int) => {x*2} //anonymus function
 {x*2} //anonymus function. This is actuall only the function body. Scala will identify the parameter type & convert this body to function internally.
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+Immutability-
+Unable to change
+
+var- variable - can change it
+val- value - can't ch
+
+Benifits of immutability-
+1) It helps us adopt mathemetical approach
+2) It helps us to avoid various problems - Immutable objects are more thread safe. 
+                                           Immutability allows a thread to work on object without worrying about other threads since it knows that no one is modifying the object.
+                                           Immutability is important in multithreaded environment.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+Recursion & Tail Recursion-
+
+Ref-https://www.geeksforgeeks.org/tail-recursion/
+
+Recursion- Function call's itself
+Tail Recursion- Arecursive function is a tail recursive when the recursive call is the last thing executed by the function.
+
+Why do we care about Tail Recursion-
+Tail recursive functions are better than recursive function since compiler can optimize them. Since compiler comes to know that recursive call is the last thing to do then there is no point to do anything in current function.
+SO it doesn't maintain that memory stack and performs the operations while executing the recursion.
+Benifits- 1) No stack maintain in memory hense it's memory efficient operation
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Statements-
+A statement is the smallest standalone element that expresses some action to be carried out.
+
+eg: println("Hello World!")
+
+In Function Paradym - In Function programming every statement have capability to return the value.
+
+Void vs Unit-
+Void in java means nothing.
+Unit in scala can be use as a void but it's a value in Scala.
+
+Expression in Scala- Since Scala statement returns value it's sometimes called expression and 
+                     you can 100% say that Scala  doesn't have statement but only expression.
+                     
+Benifits of statement returning a value?
+-It helps to achive immutability.
+How?- Since every statement reurns a value then -> you don't need to use variables to capture the outcoe of the statements.
+       -> Now since you don't need to use variables so no need to change the state of variables 
+       so -> It indirectly encourages the immutability.
+       
+
+Eg-
+Imperative Style                                         |                           Functional Style
+                                                         |
+def myResult(i:Int):Unit = {                             |                     def myResult(i:Int):String = {
+res=""                                                   |                     if (i>=0) {"Passed"}
+if (i>=50) {r="Passed"}                                  |                     else {"fail"}
+else {r="fail"}                                          |                     }
+println(r)                                               |
+}                                                        |
+
+
+As per above example functional version of code is 
+-> concise
+-> and returning statement helps us to reduce variables
+-> and achive immutability.
+
+
+
+
+
+
+       
 
 
