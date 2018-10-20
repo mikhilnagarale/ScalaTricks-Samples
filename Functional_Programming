@@ -192,6 +192,29 @@ scala> x.takeWhile(_<20) foreach println
 8
 13
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Pattern Matching-
+In general programming pattern matching is like matchine string or matching regular experession.
+IN Scala Pattern Matching we can -
+1) objects matching
+2) Type pattern match-
+eg:-
+def myTest(x:Any)={
+x match{
+case i:Integer => "Its an Integer "+ i
+case s:String => "Its a String"+ s
+case d:double => "It's a double" + d
+case _ => "Opps Something else!"
+}
+}
+
+Typed pattern matching is useful for xml parsing.
+
+Pattern Matching SolutionDesigning:-
+1) Deconstruct the object
+2) Type Cheecking
+3) Testing if conditions & taking Actions
+
 
 
 
