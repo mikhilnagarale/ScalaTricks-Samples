@@ -215,6 +215,32 @@ Pattern Matching SolutionDesigning:-
 2) Type Cheecking
 3) Testing if conditions & taking Actions
 
+------------------------------------------------------------------------------------------------------------------------------------------
+Closure-
+What is Closure?
+-A function which uses one or more free variable is a closure.
+Eg-
+def getHike(salary:Double) = salary * p/100
+
+What is a free variable?
+-A free variable is a variable which is not define/declare during function decleration or 
+ a variable which is not yet bind to function body during function decleration.
+Eg- In above function decleration variable 'p' is free variable.
+
+If we don't define the value of free variable in closure function then from where does it get it?
+- A clousre function will look for the given free variable value in newarest possible compiler environment of your program.
+like- nearest local variable
+or a global variable defined outside the function. 
+
+This behaviour is similar to objects in object oriented programming but this behaviour in functional programming helps to destruct the object
+i.e-
+due to availability of closure in Scala or any other functional programming language helps to keep data and method/function separately.
+which helps in reducing the code size and gives us more flexibility to add new functions.
+
+Where as in object it encapsulate data and the function in class itself. Hense functions are not light weight and if the same function has 
+to be used in another place then we'll need to use inheretence which we don't need to use in functional programming.
+
+If you're function is independent of the data then it could be used anywhere more freely & widely at many places.
 
 
 
