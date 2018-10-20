@@ -115,6 +115,78 @@ As per above example functional version of code is
 -> and returning statement helps us to reduce variables
 -> and achive immutability.
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Strict & Lazy Evaluation-
+Strict Evaluation- Evaluate expression now.
+Lazy Evaluation- Evaluate expression on first use.
+
+
+observations-
+1) Default method of expression evaluation in Scala is strict
+2) Scala evaluates function parameters before passing the value to the function. Hense parameters are evaluated only once.
+3) If the parameters to the functionare function (Higher order functions) instead of premitive type then scala will evaluate the function when it's actually called or on every use of the function.
+4) If you don't want multiple evaluation of a function then you can cache it using val.
+
+Lazy Evaluation-
+Scala evaluate lazy values on it's first use.
+
+You can make an expression by using a lazy val.
+There is no syntax to make a function lazy. However you can make a function lazy by caching it to a lazy val.
+
+WHy Lazy?-
+val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toList.filter(x => x.contains("Error")).take(1)
+val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toList.filter(_.contains("Error")).take(1)
+val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toList.filter(_.contains("Error")).take(2)
+
+Lazy Evaluation using Stream instead of List-
+
+
+scala> val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toStream
+s: scala.collection.immutable.Stream[String] = Stream(Hi , ?) //Since we used toStream it only readed a first line in file.
+
+scala> val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toStream.filter(_.contains("Error"))
+s: scala.collection.immutable.Stream[String] = Stream(Error heloo helo hi bye, ?) 
+// Here We applied the filter for value "Error". The file has two rows with value "Error" but it didn't applied the filter on whole file.
+// and instead it gave us the single value yet. It's kind of partial evaluation which saves memory.
+
+scala> val s  = Source.fromFile("/home/ubuntu/myLogFile.txt").getLines().toStream.filter(_.contains("Error")).take(2)
+s: scala.collection.immutable.Stream[String] = Stream(Error heloo helo hi bye, ?)
+// Here now even after mentioning that '.take(2)' means pick 2 values with "Error" . It's still taking only 1 row. This is because we've not yet 
+// used the value of s . So it's sitill partial evaluation .
+
+scala> println(s)
+Stream(Error heloo helo hi bye, ?)
+//Here as well it's printing only one row instead of two. SInce Scala knew that printing the row is just not use of value it's just for validation.
+
+scala> s foreach println
+Error heloo helo hi bye
+Error HI Hello bye hi bye
+
+// Finally it executed and we got two rows. This is because we used the value of s to loop and then print. 
+// So it's actually like we required the second or all the rows in value s.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Example of stream (Stream is a Lazy list in Scala)
+-----------------------------------------------------------------------------------------------------------------------------------------
+def fibForm(a:Int,b:Int): Stream[Int] ={ a #:: fibForm(b,a+b)}
+// Stream[Int] - Our function is returning a Stream of int values.
+// #:: - This sign is use to append to the Stream
+
+scala> val x = fibForm(1,2)
+x: Stream[Int] = Stream(1, ?)
+//It's a lazy evaluation since we used Stream
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
