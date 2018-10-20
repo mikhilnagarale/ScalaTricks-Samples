@@ -177,7 +177,20 @@ scala> val x = fibForm(1,2)
 x: Stream[Int] = Stream(1, ?)
 //It's a lazy evaluation since we used Stream
 
+scala> x.takeWhile(_<10) foreach println
+1
+2
+3
+5
+8
 
+scala> x.takeWhile(_<20) foreach println
+1
+2
+3
+5
+8
+13
 
 
 
