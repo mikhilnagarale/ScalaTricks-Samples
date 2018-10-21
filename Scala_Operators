@@ -1,0 +1,44 @@
+Scala Doesn't have any operator
+Operators are defined as method in scala.
+Every value in Scala is an object
+Every method in Scala is an operator
+Scala allows object oriented notation(. notation) or operator notation ( without .) for making a method call.
+
+Use of method/Operator with one or more parameters-
+
+One input parameters to operator / method-
+------------------
+Syntax -  <object> <space> <method/operator> <space> <parameter>
+<object> <.> <method/operator>(<parameter>)
+
+scala> val i = 10
+i: Int = 10
+
+scala> i.+(20) //Object oriented syntax using '.'
+res5: Int = 30
+
+scala> i + 20 //Methemetical Syntax without '.'
+res6: Int = 30
+
+scala> i compare 20
+res7: Int = -1
+
+scala> i .compare(20)
+res8: Int = -1
+
+scala> -5.abs
+res11: Int = 5
+
+Multiple input parameters to operator / method-
+------------------
+Syntax - <object><space><method/operator><space><parameter> //not working yet to check right syntax.
+
+Unary Operator-
+-----------------
+Operator which operates on only one value.
+There are only 4 unary operators in Scala-
++ positive
+- Negative
+! Logical Not
+~ Binary One's complement.
+------------------------
