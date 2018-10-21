@@ -41,4 +41,16 @@ There are only 4 unary operators in Scala-
 - Negative
 ! Logical Not
 ~ Binary One's complement.
+Eg- 
+-5
++22
+i.unary_- //object notation
+
+scala> 5.unary_-
+res19: Int = -5
+
+scala> -5
+res20: Int = -5
+
 ------------------------
+
