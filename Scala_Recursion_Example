@@ -15,7 +15,7 @@ else
 
 ---------------------------------------------------------------
 
-scala> val mySquare = fnMyltiplyRec(2,_:Int) //partial functions
+scala> val mySquare = fnMyltiplyRec(2,_:Int) //partially applied functions
 mySquare: Int => Int = $$Lambda$3182/1307506483@35b6a339
 
 scala> mySquare(7)
