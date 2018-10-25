@@ -1,0 +1,17 @@
+def fnMyltiply(x:Int,y:Int)={
+var a = 1
+val b = 1 to x
+b.foreach((x)=>{a=a*y})
+a
+}
+
+---------------------------------------------------------------
+
+def fnMyltiplyRec(x:Int,y:Int,c:Int=1):Int={
+if (x==0) {c}
+else 
+{fnMyltiplyRec(x-1,y,c*y)}
+}
+
+---------------------------------------------------------------
+
