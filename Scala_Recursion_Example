@@ -15,3 +15,14 @@ else
 
 ---------------------------------------------------------------
 
+scala> val mySquare = fnMyltiplyRec(2,_:Int) //partial functions
+mySquare: Int => Int = $$Lambda$3182/1307506483@35b6a339
+
+scala> mySquare(7)
+res3: Int = 49
+
+scala> val myCube = fnMyltiplyRec(3,_:Int)
+myCube: Int => Int = $$Lambda$3183/1549953918@5ea047b7
+
+scala> myCube(5)
+res4: Int = 125
