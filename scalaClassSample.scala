@@ -64,6 +64,9 @@ testSingleton.sayHello
 testSingleton.sayHello
 
 --------------apply method-------------------------------------------------
+//Apply method is default method called in any class when we don't pass the method name
+//In Below example when we call the myList(2) then it internally called myList(2)
+//Apply methos can be defined in class as well as objects in Scala.
 val myList = List("India","America","China","Japan")
 println(myList(1))
 println(myList(3))
