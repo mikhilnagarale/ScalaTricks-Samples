@@ -45,23 +45,23 @@ e.showBox
 val f = new Box(3,4)
 f.showBox
 
---------------object in scala (Singletone Class/object)-------------------
+--------------object in scala (Singleton Class/object)-------------------
 //Use of object in Scala
 //1) To implement static methods in scala class
 //2) To implement singletone design pattern  -- Singletone design pattern in object oriented programming is use to create single object of any class
-//Which can be used everywhere without re-instentiating the class again & again . Eg- Creating Singletone class for utility methods or 
-//Creating Singletone class for loading property file & reading properties which can be used in all modules whithout creating new objects for every module.
+//Which can be used everywhere without re-instentiating the class again & again . Eg- Creating Singleton class for utility methods or 
+//Creating Singleton class for loading property file & reading properties which can be used in all modules whithout creating new objects for every module.
 
-object testSingletone{
-  println("Hello Singletone First Use....")
+object testSingleton{
+  println("Hello Singleton First Use....")
   
   def sayHello = {println("Hello!")}
 }
 
 
-testSingletone.sayHello
-testSingletone.sayHello
-testSingletone.sayHello
+testSingleton.sayHello
+testSingleton.sayHello
+testSingleton.sayHello
 
 --------------apply method-------------------------------------------------
 val myList = List("India","America","China","Japan")
