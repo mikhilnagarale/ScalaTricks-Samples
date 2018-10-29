@@ -44,3 +44,27 @@ e.showBox
 
 val f = new Box(3,4)
 f.showBox
+
+--------------object in scala (Singletone Class/object)-------------------
+//Use of object in Scala
+//1) To implement static methods in scala class
+//2) To implement singletone design pattern
+object testSingletone{
+  println("Hello Singletone First Use....")
+  
+  def sayHello = {println("Hello!")}
+}
+
+
+testSingletone.sayHello
+testSingletone.sayHello
+testSingletone.sayHello
+
+--------------apply method-------------------------------------------------
+val myList = List("India","America","China","Japan")
+println(myList(1))
+println(myList(3))
+println(myList.apply(2))
+println(myList.apply(3))
+
+
