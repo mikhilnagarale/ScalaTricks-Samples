@@ -48,7 +48,10 @@ f.showBox
 --------------object in scala (Singletone Class/object)-------------------
 //Use of object in Scala
 //1) To implement static methods in scala class
-//2) To implement singletone design pattern
+//2) To implement singletone design pattern  -- Singletone design pattern in object oriented programming is use to create single object of any class
+//Which can be used everywhere without re-instentiating the class again & again . Eg- Creating Singletone class for utility methods or 
+//Creating Singletone class for loading property file & reading properties which can be used in all modules whithout creating new objects for every module.
+
 object testSingletone{
   println("Hello Singletone First Use....")
   
