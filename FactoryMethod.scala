@@ -1,7 +1,7 @@
 abstract class Room{
 def bookingPrice:Double
 def facilities:List[String]
-def availibility:Int
+def availability:Int
 def book(noOfRooms:Int)
 }
 
@@ -12,29 +12,32 @@ val DELUX = 1
 val SUPER_DELUX = 2
 
 private class standerdRoom extends Room{
- private var _availibility : Int=20
+ private var _availability : Int=20
  override def bookingPrice = 70
  override def facilities = List("Bed","Washroom","fan")
+ override def availability = _availability
  override def book(noOfRooms:Int) = {
-   _availibility = _availibility - noOfRooms
+   _availability = _availability - noOfRooms
   } 
  }
 
 private class deluxRoom extends Room{
- private var _availibility : Int=10
+ private var _availability : Int=10
  override def bookingPrice = 120
  override def facilities = List("Bed","Washroom","fan","AC")
+ override def availability = _availability
  override def book(noOfRooms:Int) = {
-  _availibility = _availibility - noOfRooms
+  _availability = _availability - noOfRooms
   }
  }
 
 private class superDeluxRoom extends Room{
- private var _availibility : Int=5
+ private var _availability : Int=5
  override def bookingPrice = 250
  override def facilities = List("Bed","Washroom","fan","AC","Dinner")
+ override def availability = _availability
  override def book(noOfRooms:Int) = {
-   _availibility = _availibility - noOfRooms
+   _availability = _availability - noOfRooms
   }
  }
  
@@ -47,3 +50,6 @@ private class superDeluxRoom extends Room{
    }
   }
 }
+
+
+
