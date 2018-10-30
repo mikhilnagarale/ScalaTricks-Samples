@@ -41,7 +41,7 @@ private class superDeluxRoom extends Room{
   }
  }
  
- def apply(roomType:Int)={
+ def apply(roomType:Int):Room={
   roomType match{
    case STANDERD => new standerdRoom()
    case DELUX => new deluxRoom()
