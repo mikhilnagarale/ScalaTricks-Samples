@@ -4,3 +4,17 @@ https://alvinalexander.com/scala/scala-cheat-sheet-reference-examples
 Function Literals-
 https://alvinalexander.com/scala/how-to-use-functional-literals-anonymous-functions-in-scala
 
+Tips:-
+
+-> used for defining key,value pair while defining dictionary in scala (Key -> Value)
+<- to pass a value or sequence to a variable inside a for loop
+=> function literal/anonymus function map,filter all functions will use this
+= assignment / define a function
+
+foreach - iterate over the values in sequential fashion does not return anything & operate on data itself
+map - iterate over the values in sequential fashion returns a collection of the values returned by the function passed to it.
+for - Just a syntax change for foreach function
+filter - apply a boolean function/condition on input & rreturns a resultset which satisfies the boolean condition
+flatMap -Works same as Map function the only difference is if the result has array or list then it flattens it.
+
+
