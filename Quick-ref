@@ -18,3 +18,4 @@ filter - apply a boolean function/condition on input & rreturns a resultset whic
 flatMap -Works same as Map function the only difference is if the result has array or list then it flattens it.
 
 
+Saprk Application -> Session (Many (n) - Can be created to Multiuser access) -> SparkContext(Connection to cluster. Unique for single Application)
