@@ -19,3 +19,20 @@ flatMap -Works same as Map function the only difference is if the result has arr
 
 
 Saprk Application -> Session (Many (n) - Can be created to Multiuser access) -> SparkContext(Connection to cluster. Unique for single Application)
+
+General Overview of ETL Pipeline in Big Data-
+------------------------------------------------
+source - 
+Batch storage - files/rdbms/traditional system like db2 or mainframe 
+stream storage - Kafka
+
+processing & target storage- spark,hdfs,yarn
+
+target reporting layer- rdbms/cassendra/mongodb/hbase+phoenix - latency 
+
+Reporting layer- Java UI/Tablue/QlikView
+
+
+
+
+
